@@ -1,73 +1,66 @@
-# Welcome to your Lovable project
+# 💸 Personal Finance Visualizer
 
-## Project info
+A modern, colorful, and intuitive web application for tracking your personal finances — built with Next.js, TypeScript, shadcn/ui, Recharts, and MongoDB.
 
-**URL**: https://lovable.dev/projects/373a6444-eeed-49d5-b7e2-b30ba90309da
+This project was designed to make managing your expenses not just practical, but also delightful, with rich charts, responsive design, and playful UI touches like vibrant category tags.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Features
 
-**Use Lovable**
+### ✅ Stage 1: Basic Transaction Tracking
+- Add, edit, and delete transactions (amount, date, description)
+- Transaction list view with sorting by date
+- Monthly expenses bar chart (Recharts)
+- Basic form validation with Zod
+- Responsive design with graceful error states
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/373a6444-eeed-49d5-b7e2-b30ba90309da) and start prompting.
+### ✅ Stage 2: Categories
+- Predefined colorful categories: 
+  - 🍔 Food, 🚌 Transport, 🏠 Bills, 🎬 Entertainment, 🛒 Shopping, 🏥 Health, 🎓 Fees, 💰 Savings, 🎯 Others
+- Category selection in transaction form
+- Category-wise pie chart
+- Dashboard with:
+  - Total expenses this month
+  - Category breakdown
+  - Most recent transactions list
 
-Changes made via Lovable will be committed automatically to this repo.
+### ✅ Stage 3: Budgeting & Insights
+- Set monthly budgets by category
+- Budget vs actual comparison chart
+- Spending insights:
+  - e.g. “You’ve spent 80% of your Food budget”
+  - Categories exceeding budget highlighted
+- Optional confetti animation when under all budgets
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🖼️ Screenshots
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+> _📸 Coming soon!_  
+> ![](public/screenshots/1.png)
+![](public/screenshots/2.png)
+![](public/screenshots/3.png)
+![](public/screenshots/4.png)
+![](public/screenshots/5.png)
+![](public/screenshots/6.png)
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## ⚙️ Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Frontend:** Next.js (TypeScript), React
+- **UI:** shadcn/ui, Tailwind CSS
+- **Charts:** Recharts
+- **Form validation:** React Hook Form + Zod
+- **State:** React Context / Zustand
+- **Backend API:** Next.js API Routes (Node)
+- **Database:** MongoDB (Atlas) with Mongoose
+- **Deployment:** Vercel (frontend + API), MongoDB Atlas
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🛠️ Getting Started
 
-**Edit a file directly in GitHub**
+### 📦 Clone the repo
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/373a6444-eeed-49d5-b7e2-b30ba90309da) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
