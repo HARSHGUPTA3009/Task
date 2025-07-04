@@ -36,14 +36,13 @@ This project was designed to make managing your expenses not just practical, but
 ---
 
 ## 🖼️ Screenshots
-
-> _📸 Coming soon!_  
-> ![](public/screenshots/1.png)
-![](public/screenshots/2.png)
-![](public/screenshots/3.png)
-![](public/screenshots/4.png)
-![](public/screenshots/5.png)
-![](public/screenshots/6.png)
+ 
+![](public/ss/1.png)
+![](public/ss/2.png)
+![](public/ss/3.png)
+![](public/ss/4.png)
+![](public/ss/5.png)
+![](public/ss/6.png)
 
 ---
 
