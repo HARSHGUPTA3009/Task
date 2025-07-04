@@ -1,0 +1,211 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Personal Finance App Design System */
+
+@layer base {
+  :root {
+    /* Main theme colors */
+    --background: 240 10% 98%;
+    --foreground: 240 10% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 9%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 6% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.75rem;
+
+    /* Finance category colors */
+    --food: 25 95% 53%;
+    --transport: 217 91% 60%;
+    --shopping: 316 73% 52%;
+    --bills: 12 76% 61%;
+    --health: 142 71% 45%;
+    --fees: 45 93% 47%;
+    --entertainment: 280 100% 70%;
+    --salary: 120 100% 35%;
+    --freelance: 180 100% 40%;
+    --investment: 60 100% 50%;
+    --others: 210 11% 71%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(280 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 91% 60%), hsl(142 71% 45%));
+    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(120 100% 35%));
+    --gradient-warning: linear-gradient(135deg, hsl(45 93% 47%), hsl(25 95% 53%));
+    --gradient-background: linear-gradient(135deg, hsl(240 10% 98%), hsl(240 20% 95%));
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(240 10% 9% / 0.08);
+    --shadow-medium: 0 4px 16px -4px hsl(240 10% 9% / 0.12);
+    --shadow-strong: 0 8px 32px -8px hsl(240 10% 9% / 0.16);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+  }
+
+  .dark {
+    --background: 240 10% 9%;
+    --foreground: 240 10% 98%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 240 10% 98%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 240 10% 98%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 240 5% 84%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 4% 16%;
+    --accent-foreground: 240 5% 84%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 262 83% 58%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(280 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 91% 60%), hsl(142 71% 45%));
+    --gradient-background: linear-gradient(135deg, hsl(240 10% 9%), hsl(240 15% 12%));
+
+    --sidebar-background: 240 10% 9%;
+    --sidebar-foreground: 240 10% 98%;
+    --sidebar-primary: 240 10% 98%;
+    --sidebar-primary-foreground: 240 10% 9%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 10% 98%;
+    --sidebar-border: 240 4% 16%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-background);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .finance-card {
+    @apply bg-card/80 backdrop-blur-sm border-0 shadow-[var(--shadow-medium)] 
+           hover:shadow-[var(--shadow-strong)] transition-all duration-300
+           hover:scale-[1.02] rounded-[var(--radius)];
+  }
+
+  .category-tag {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium
+           shadow-sm transition-all duration-200 hover:scale-105;
+  }
+
+  .category-food { @apply bg-[hsl(var(--food))]/20 text-[hsl(var(--food))] border border-[hsl(var(--food))]/30; }
+  .category-transport { @apply bg-[hsl(var(--transport))]/20 text-[hsl(var(--transport))] border border-[hsl(var(--transport))]/30; }
+  .category-shopping { @apply bg-[hsl(var(--shopping))]/20 text-[hsl(var(--shopping))] border border-[hsl(var(--shopping))]/30; }
+  .category-bills { @apply bg-[hsl(var(--bills))]/20 text-[hsl(var(--bills))] border border-[hsl(var(--bills))]/30; }
+  .category-health { @apply bg-[hsl(var(--health))]/20 text-[hsl(var(--health))] border border-[hsl(var(--health))]/30; }
+  .category-fees { @apply bg-[hsl(var(--fees))]/20 text-[hsl(var(--fees))] border border-[hsl(var(--fees))]/30; }
+  .category-entertainment { @apply bg-[hsl(var(--entertainment))]/20 text-[hsl(var(--entertainment))] border border-[hsl(var(--entertainment))]/30; }
+  .category-salary { @apply bg-[hsl(var(--salary))]/20 text-[hsl(var(--salary))] border border-[hsl(var(--salary))]/30; }
+  .category-freelance { @apply bg-[hsl(var(--freelance))]/20 text-[hsl(var(--freelance))] border border-[hsl(var(--freelance))]/30; }
+  .category-investment { @apply bg-[hsl(var(--investment))]/20 text-[hsl(var(--investment))] border border-[hsl(var(--investment))]/30; }
+  .category-others { @apply bg-[hsl(var(--others))]/20 text-[hsl(var(--others))] border border-[hsl(var(--others))]/30; }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-[hsl(280_100%_70%)] bg-clip-text text-transparent;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
